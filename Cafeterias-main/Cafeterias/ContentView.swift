@@ -16,7 +16,7 @@ struct ContentView: View {
             
             
         Text("CAFETERIAS FCA UNAM")
-            .padding()
+            .padding(3000)
             .foregroundColor(Color.red)
             .background(.bar)
            // .font(.headline)
