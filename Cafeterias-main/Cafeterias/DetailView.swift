@@ -29,6 +29,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(coffe: Cafeteria(name: "cafeteria", image: "cabaña"))
+        DetailView(coffe: Cafeteria(name: "cafeteria", image: "cabaña", type: "Comida", priceLevel: 4, score: 3))
     }
 }

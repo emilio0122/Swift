@@ -12,6 +12,9 @@ struct Cafeteria: Identifiable {
     var id = UUID()
     var name : String
     var image : String
+    var type : String
+    var priceLevel : Int
+    var score : Int
     var feature: Bool = false
 
 }
@@ -21,15 +24,38 @@ struct CoffeFullImageRow: View{
     var coffe: Cafeteria
     
     var body: some View {
-        ZStack{
+        HStack{
             Image(coffe.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 200)
+                .frame(width: 60, height: 100)
+                .clipShape(Circle())
                 .cornerRadius(15)
             
-            Text(coffe.name)
+            VStack(alignment: .leading) {
+                HStack {
+                
+                Text(coffe.name)
+                    .font(.system(.body, design: .rounded))
+                    .bold()
+                
+                
+                Text(String(repeating: "⭐️" , count: coffe.score))
+                    .font(.subheadline)
+                    .foregroundColor(.yellow)
+                    .frame(alignment: .trailing)
+                
+                }
             
+            Text(coffe.type)
+                    .font(.system(.subheadline, design: .rounded))
+                    .foregroundColor(.secondary)
+                
+            Text(String(repeating: "$", count: coffe.priceLevel))
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
+            }
         }
         
     }

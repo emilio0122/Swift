@@ -11,11 +11,11 @@ struct ListaCafeterias: View {
     
     var cafeterias = [
         
-        Cafeteria(name: "La cabaña", image: "cabaña"),
+        Cafeteria(name: "La cabaña", image: "cabaña", type: "Comida", priceLevel: 4, score: 3),
         
-        Cafeteria(name: "Cafeteria 1", image: "c1"),
-        Cafeteria(name: "Cfeteria 2", image: "c2"),
-        Cafeteria(name: "Cafeteria 3", image: "c3")
+        Cafeteria(name: "Cafeteria 1", image: "c1", type: "Postres", priceLevel: 3, score: 5),
+        Cafeteria(name: "Cfeteria 2", image: "c2", type: "Comida corrida", priceLevel: 5, score: 4),
+        Cafeteria(name: "Cafeteria 3", image: "c3", type: "Comida", priceLevel: 2, score: 2)
     ]
     
     
